@@ -1,10 +1,16 @@
 import React, { useState } from 'react';
 
-export const AddTask = () => {
+export const AddTask = ({ onAdd }) => {
   const [text, setText] = useState('');
 
   const handleChange = (e) => {
     setText(e.target.value);
+  };
+
+  const handleSubmit = () => {
+    if (text.trim() === '') return;
+    onAdd(text);
+    setText('');
   };
 
   return (
@@ -15,7 +21,7 @@ export const AddTask = () => {
         onChange={handleChange}
         value={text}
       />
-      <button>Add Task</button>
+      <button onClick={handleSubmit}>Add Task</button>
     </div>
   );
 };

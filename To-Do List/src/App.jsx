@@ -1,12 +1,10 @@
-import { AddTask } from './components/AddTask';
-import { TaskList } from './components/TaskList';
+import { Todo } from "./components/Todo";
 
 function App() {
+  
   return (
     <>
-      <h1 className="todo-text">To-Do App</h1>
-      <AddTask />
-      <TaskList />
+      <Todo/>
     </>
   );
 }
