@@ -4,7 +4,7 @@ import { TaskList } from './TaskList';
 
 export const Todo = () => {
   const [tasks, setTasks] = useState([]);
-
+  
   const addTask = (text) => {
     const newTask = { id: Date.now(), text, completed: false };
     setTasks([...tasks, newTask]);
